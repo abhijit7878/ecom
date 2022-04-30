@@ -1,16 +1,16 @@
 <?php
 
+class paytest extends \ecom\Framework\TestCase{
+    protected $pay;
+    public function testAdminList(){
 
-use PHPUnit\Framework\TestCase;
+        $this->pay = new \ecom\admin\classes\admin;
+        $this->pay->getAdminList(10,'abhijit','abhijit000@gmail.com');
+        $this->assertEquals( $this->admin->getAdminList(), 10,'abhijit','abhijit000@gmail.com' );
 
 
-class FirstTest extends TestCase
-{
-    public function testMultiplicationOfTwoNumber()
-    {
-        $a =5;
-        $b =4;
-        $c =5*4;
-        $this->assertEquals($c,20);
     }
+
+
 }
+?>
